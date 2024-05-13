@@ -10,23 +10,23 @@ package org.eithanmonroy.model;
  * @author Eithan
  */
 public class Ticket {
-    
     private int ticketId;
     private String descripcion;
     private String Estatus;
     private int clienteId;
     private String cliente;
     private int facturaId;
+    private String factura;
     
     public Ticket(){
     }
 
-    public Ticket(int ticketId, String descripcion, String Estatus, String cliente, int facturaId) {
+    public Ticket(int ticketId, String descripcion, String Estatus, String cliente, String factura) {
         this.ticketId = ticketId;
         this.descripcion = descripcion;
         this.Estatus = Estatus;
         this.cliente = cliente;
-        this.facturaId = facturaId;
+        this.factura = factura;
     }
 
     public int getTicketId() {
@@ -77,9 +77,19 @@ public class Ticket {
         this.facturaId = facturaId;
     }
 
+    public String getFactura() {
+        return factura;
+    }
+
+    public void setFactura(String factura) {
+        this.factura = factura;
+    }
+    
+    
+
     @Override
     public String toString() {
-        return "Ticket{" + "ticketId=" + ticketId + ", descripcion=" + descripcion + ", Estatus=" + Estatus + ", clienteId=" + clienteId + ", cliente=" + cliente + ", facturaId=" + facturaId + '}';
+        return "Id: " + ticketId + " | " + descripcion;
     }
 
     

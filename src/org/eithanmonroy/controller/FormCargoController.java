@@ -54,7 +54,7 @@ public class FormCargoController implements Initializable {
                     SuperKinalAlert.getInstance().mostrarAlertasInformacion(400);
                     stage.menuCargoView();
                 }else{
-                    SuperKinalAlert.getInstance().mostrarAlertasInformacion(33);
+                    SuperKinalAlert.getInstance().mostrarAlertasInformacion(600);
                     if(tfNombreCargo.getText().equals("")){
                         tfNombreCargo.requestFocus();
                     }else if(tfDescripcionCargo.getText().equals("")){
@@ -73,7 +73,7 @@ public class FormCargoController implements Initializable {
                         stage.menuCargoView();
                     }
                 }else{
-                    SuperKinalAlert.getInstance().mostrarAlertasInformacion(33);
+                    SuperKinalAlert.getInstance().mostrarAlertasInformacion(600);
                     if(tfNombreCargo.getText().equals("")){
                         tfNombreCargo.requestFocus();
                     }else if(tfDescripcionCargo.getText().equals("")){
@@ -104,7 +104,7 @@ public class FormCargoController implements Initializable {
     public void agregarCargo(){
         try{
             conexion = Conexion.getInstance().obtenerConexion();
-            String sql = "call sp_agregarCargo(?,?)";
+            String sql = "call sp_agregarCargos(?,?)";
             statement = conexion.prepareStatement(sql);
             statement.setString(1, tfNombreCargo.getText());
             statement.setString(2, tfDescripcionCargo.getText());
@@ -130,7 +130,7 @@ public class FormCargoController implements Initializable {
     public void editarCargo(){
         try{
             conexion = Conexion.getInstance().obtenerConexion();
-            String sql = "call sp_editarrCargo(?,?,?)";
+            String sql = "call sp_EditarCargo(?,?,?)";
             statement = conexion.prepareStatement(sql);
             statement.setInt(1, Integer.parseInt(tfCargoId.getText()));
             statement.setString(2, tfNombreCargo.getText());

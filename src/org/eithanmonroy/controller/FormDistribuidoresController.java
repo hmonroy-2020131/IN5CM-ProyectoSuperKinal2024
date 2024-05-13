@@ -54,7 +54,7 @@ public class FormDistribuidoresController implements Initializable{
                     SuperKinalAlert.getInstance().mostrarAlertasInformacion(400);
                     stage.menuDistribuidoresView();
                 }else{
-                    SuperKinalAlert.getInstance().mostrarAlertasInformacion(33);
+                    SuperKinalAlert.getInstance().mostrarAlertasInformacion(600);
                     if(tfNombreDistribuidor.getText().equals("")){
                         tfNombreDistribuidor.requestFocus();
                     }else if(tfDireccionDistribuidor.getText().equals("")){
@@ -77,7 +77,7 @@ public class FormDistribuidoresController implements Initializable{
                         stage.menuDistribuidoresView();
                     }
                 }else{
-                    SuperKinalAlert.getInstance().mostrarAlertasInformacion(33);
+                    SuperKinalAlert.getInstance().mostrarAlertasInformacion(600);
                     if(tfNombreDistribuidor.getText().equals("")){
                         tfNombreDistribuidor.requestFocus();
                     }else if(tfDireccionDistribuidor.getText().equals("")){

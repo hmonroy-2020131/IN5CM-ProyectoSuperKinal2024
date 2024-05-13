@@ -40,7 +40,7 @@ public class SuperKinalAlert {
             alert.setHeaderText("Confirmacion de Edicion");
             alert.setContentText("Edicion Realizada con Exito");
             alert.showAndWait();
-        } else if(code == 33){// Codigo 33 sirve alertas de campos nulos
+        } else if(code == 600){// Codigo 600 sirve alertas de campos nulos
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Campos Obligatorios");
             alert.setHeaderText("Campos Obligatorios");

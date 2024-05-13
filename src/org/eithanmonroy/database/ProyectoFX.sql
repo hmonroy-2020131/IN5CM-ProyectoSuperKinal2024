@@ -14,7 +14,7 @@ create table Clientes(
         primary key PK_clienteId (clienteId)
 );
 
-create table Cargo(
+create table Cargos(
 		cargoId int not null auto_increment,
         nombreCargo varchar (30) not null,	
         descripcionCargo varchar (100) not null,
@@ -34,7 +34,7 @@ create table Empleados(
         constraint FK_encargadoId_Empleados foreign key (encargadoId)
 			references Empleados(empleadoId),
 		constraint FK_cargoId_Empleados foreign key (cargoId)
-			references Cargo(cargoId)
+			references Cargos(cargoId)
 );
 
 create table Distribuidores(
@@ -99,7 +99,7 @@ create table Productos(
     precioVentaUnitario decimal(10,2),
     precioVentaMayor decimal(10,2),
     precioCompra decimal(10,2),
-    imagenProducto Blob,
+    imagenProducto longblob,
     distribuidorId int not null,
     categoriaproductosId int not null,
     primary key PK_productoId(productoId),
@@ -121,6 +121,17 @@ create table detalleCompra(
             references Compras(compraId)
 );
 
+create table detalleFactura(
+    detalleFacturaId int not null auto_increment,
+	productoId int not null,
+    facturaId int not null,
+    primary key PK_detalleFacturaId(detalleFacturaId),
+	constraint FK_productoId_detalleFactura foreign key (productoId)
+            references Productos(productoId),
+	constraint FK_facturaId_detalleFactura  foreign key (facturaId)
+            references Facturas(facturaId)
+);
+
 create table Promociones(
     promocionId int not null auto_increment,
     precioPromocion decimal(10,2) not null,
@@ -132,3 +143,6 @@ create table Promociones(
     constraint FK_productoId_Promociones foreign key (productoId)
             references Productos(productoId)
 );
+
+
+SET Global time_zone = '-6:00';

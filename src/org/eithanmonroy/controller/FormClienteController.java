@@ -78,7 +78,7 @@ public class FormClienteController implements Initializable {
     public void agregarCliente(){
         try{
             conexion = Conexion.getInstance().obtenerConexion();
-            String sql = "CALL sp_agregarCliente(?,?,?,?,?)";
+            String sql = "call sp_agregarCliente(?,?,?,?,?)";
             statement = conexion.prepareStatement(sql);
             statement.setString(1, tfNombre.getText());
             statement.setString(2, tfApellido.getText());
@@ -107,7 +107,7 @@ public class FormClienteController implements Initializable {
     public void editarCliente(){
         try{
             conexion = Conexion.getInstance().obtenerConexion();
-            String sql = "CALL sp_EditarCliente(?,?,?,?,?,?)";
+            String sql = "call sp_EditarCliente(?,?,?,?,?,?)";
             statement = conexion.prepareStatement(sql);
             statement.setInt(1, Integer.parseInt(tfClienteId.getText()));
             statement.setString(2, tfNombre.getText());

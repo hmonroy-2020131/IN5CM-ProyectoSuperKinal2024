@@ -35,7 +35,7 @@ import org.eithanmonroy.utils.SuperKinalAlert;
  * @author Eithan
  */
 public class MenuEmpleadosController implements Initializable {
-        private main stage;
+    private main stage;
     private int op;
     
     private static Connection conexion;
@@ -49,7 +49,7 @@ public class MenuEmpleadosController implements Initializable {
     TableColumn colEmpleadoId,colNombreE,colApellidoE,colSueldo,colHoraEntrada,colHoraSalida,colCargoId,colEncargadoId;
     
     @FXML
-    Button btnRegresar,btnAgregar,btnEditar,btnEliminar,btnBuscar;
+    Button btnRegresar,btnAgregar,btnEditar,btnEliminar,btnBuscar,btnAsignarE;
     
     @FXML
     TextField tfEmpleadoId;
@@ -78,6 +78,9 @@ public class MenuEmpleadosController implements Initializable {
                 op = 3;
                 cargarDatos();
             }
+        }else if(event.getSource() == btnAsignarE){
+            EmpleadoDTO.getEmpleadoDTO().setEmpleado((Empleado)tblEmpleados.getSelectionModel().getSelectedItem());
+            stage.formAsignarEView();
         }
     
     }
@@ -108,7 +111,7 @@ public class MenuEmpleadosController implements Initializable {
         
         try{
             conexion = Conexion.getInstance().obtenerConexion();
-            String sql = " CALL sp_ListarEmpleados()";
+            String sql = "call sp_ListarEmpleados()";
             statement = conexion.prepareStatement(sql);
             resultSet = statement.executeQuery();
             
@@ -151,7 +154,7 @@ public class MenuEmpleadosController implements Initializable {
     public void eliminarEmpleado(int empId){
         try{
             conexion = Conexion.getInstance().obtenerConexion();
-            String sql = "CALL sp_EliminarEmpleado(?)";
+            String sql = "call sp_EliminarEmpleado(?)";
             statement = conexion.prepareStatement(sql);
             statement.setInt(1,empId);
             statement.execute();
@@ -181,7 +184,7 @@ public class MenuEmpleadosController implements Initializable {
         Empleado empleado = null;
         try{
             conexion = Conexion.getInstance().obtenerConexion();
-            String sql = "CALL sp_BuscarEmpleado(?)";
+            String sql = "call sp_BuscarEmpleado(?)";
             statement = conexion.prepareStatement(sql);
             statement.setInt(1,Integer.parseInt(tfEmpleadoId.getText()));
             resultSet = statement.executeQuery();
@@ -220,6 +223,7 @@ public class MenuEmpleadosController implements Initializable {
         }
         return empleado;
     }
+    
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         cargarDatos();

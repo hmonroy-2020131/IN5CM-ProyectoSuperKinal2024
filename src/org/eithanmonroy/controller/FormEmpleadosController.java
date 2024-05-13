@@ -65,7 +65,7 @@ public class FormEmpleadosController implements  Initializable {
                     SuperKinalAlert.getInstance().mostrarAlertasInformacion(400);
                     stage.menuEmpleadosView();
                 }else{
-                    SuperKinalAlert.getInstance().mostrarAlertasInformacion(33);
+                    SuperKinalAlert.getInstance().mostrarAlertasInformacion(600);
                     if(tfNombreE.getText().equals("")){
                         tfNombreE.requestFocus();
                     }else if(tfApellidoE.getText().equals("")){
@@ -91,7 +91,7 @@ public class FormEmpleadosController implements  Initializable {
                         stage.menuEmpleadosView();
                     }
                 }else{
-                    SuperKinalAlert.getInstance().mostrarAlertasInformacion(33);
+                    SuperKinalAlert.getInstance().mostrarAlertasInformacion(600);
                     if(tfNombreE.getText().equals("")){
                         tfNombreE.requestFocus();
                     }else if(tfApellidoE.getText().equals("")){
@@ -111,12 +111,12 @@ public class FormEmpleadosController implements  Initializable {
    
    
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
+    public void initialize(URL location, ResourceBundle resources) {
         if(EmpleadoDTO.getEmpleadoDTO().getEmpleado() != null){
             cargarDatos(EmpleadoDTO.getEmpleadoDTO().getEmpleado());
         }
         cmbCargos.setItems(listarCargos());
-        cmbEncargados.setItems(listarEmpleados());
+        
     }
 
     public void cargarDatos(Empleado empleado){
@@ -131,7 +131,7 @@ public class FormEmpleadosController implements  Initializable {
     public void agregarEmpleado(){
         try{
             conexion = Conexion.getInstance().obtenerConexion();
-            String sql = "CALL sp_agregarEmpleado(?,?,?,?,?,?,?)";
+            String sql = "call sp_agregarEmpleado(?,?,?,?,?,?)";
             statement = conexion.prepareStatement(sql);
             statement.setString(1, tfNombreE.getText());
             statement.setString(2, tfApellidoE.getText());
@@ -139,7 +139,6 @@ public class FormEmpleadosController implements  Initializable {
             statement.setString(4, tfHoraEntrada.getText());
             statement.setString(5, tfHoraSalida.getText());
             statement.setInt(6,((Cargo)cmbCargos.getSelectionModel().getSelectedItem()).getCargoId());
-            statement.setInt(7,((Empleado)cmbEncargados.getSelectionModel().getSelectedItem()).getEmpleadoId());
             statement.execute();
         }catch(SQLException e){
             System.out.println(e.getMessage());
@@ -161,7 +160,7 @@ public class FormEmpleadosController implements  Initializable {
     public void editarEmpleado(){
         try{
             conexion = Conexion.getInstance().obtenerConexion();
-            String sql = "CALL sp_EditarEmpleado(?,?,?,?,?,?,?,?)";
+            String sql = "call sp_EditarEmpleado(?,?,?,?,?,?,?)";
             statement = conexion.prepareStatement(sql);
             statement.setInt(1, Integer.parseInt(tfEmpleadoId.getText()));
             statement.setString(2, tfNombreE.getText());
@@ -170,7 +169,6 @@ public class FormEmpleadosController implements  Initializable {
             statement.setString(5, tfHoraEntrada.getText());
             statement.setString(6, tfHoraSalida.getText());
             statement.setInt(7,((Cargo)cmbCargos.getSelectionModel().getSelectedItem()).getCargoId());
-            statement.setInt(8,((Empleado)cmbEncargados.getSelectionModel().getSelectedItem()).getEmpleadoId());
             statement.execute();
         }catch(SQLException e){
             System.out.println(e.getMessage());
@@ -194,7 +192,7 @@ public class FormEmpleadosController implements  Initializable {
         
         try{
             conexion = Conexion.getInstance().obtenerConexion();
-            String sql = " CALL sp_ListarCargos()";
+            String sql = "call sp_ListarCargos()";
             statement = conexion.prepareStatement(sql);
             resultSet = statement.executeQuery();
             
@@ -234,7 +232,7 @@ public class FormEmpleadosController implements  Initializable {
         
         try{
             conexion = Conexion.getInstance().obtenerConexion();
-            String sql = " CALL sp_ListarEmpleados()";
+            String sql = "call sp_ListarEmpleados()";
             statement = conexion.prepareStatement(sql);
             resultSet = statement.executeQuery();
             
