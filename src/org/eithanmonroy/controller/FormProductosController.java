@@ -180,7 +180,7 @@ public class FormProductosController implements Initializable {
     public void editarProducto(){
         try{
             conexion = Conexion.getInstance().obtenerConexion();
-            String sql = "CALL sp_EditarProducto(?,?,?,?,?,?,?,?,?,?)";
+            String sql = "call sp_EditarProducto(?,?,?,?,?,?,?,?,?,?)";
             statement = conexion.prepareStatement(sql);
             statement.setInt(1, Integer.parseInt(tfProductoId.getText()));
             statement.setString(2, tfNombreP.getText());
@@ -254,7 +254,7 @@ public class FormProductosController implements Initializable {
         
         try{
             conexion = Conexion.getInstance().obtenerConexion();
-            String sql = " CALL sp_ListarDistribuidores()";
+            String sql = "call sp_ListarDistribuidores()";
             statement = conexion.prepareStatement(sql);
             resultSet = statement.executeQuery();
             
@@ -297,7 +297,7 @@ public class FormProductosController implements Initializable {
         
         try{
             conexion = Conexion.getInstance().obtenerConexion();
-            String sql = " CALL sp_ListarCategoriasProductos()";
+            String sql = "call sp_ListarCategoriasProductos()";
             statement = conexion.prepareStatement(sql);
             resultSet = statement.executeQuery();
             

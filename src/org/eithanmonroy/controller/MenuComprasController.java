@@ -80,7 +80,7 @@ public class MenuComprasController implements Initializable{
                 cargarDatos();
             }
         }else if(event.getSource() == btnAgregarDC){
-            //stage.formDetalleCompraView(1);
+            stage.formDetalleCompraView(1);
         }
     }
     

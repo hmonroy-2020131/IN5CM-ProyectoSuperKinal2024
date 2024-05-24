@@ -19,6 +19,7 @@ import org.eithanmonroy.controller.FormCargoController;
 import org.eithanmonroy.controller.FormCategoriaProductoController;
 import org.eithanmonroy.controller.FormClienteController;
 import org.eithanmonroy.controller.FormComprasController;
+import org.eithanmonroy.controller.FormDetalleCompraController;
 import org.eithanmonroy.controller.FormDetalleFacturaController;
 import org.eithanmonroy.controller.FormDistribuidoresController;
 import org.eithanmonroy.controller.FormEmpleadosController;
@@ -269,6 +270,16 @@ public class main extends Application {
             FormCategoriaProductoController formCategoriaP = (FormCategoriaProductoController)switchScene("FormCategoriaProductoView.fxml", 500, 750);
             formCategoriaP.setOp(op);
             formCategoriaP.setStage(this);
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
+    
+     public void formDetalleCompraView(int op){
+        try{
+            FormDetalleCompraController formDetalleFactura = (FormDetalleCompraController)switchScene("FormDetalleCompraView.fxml", 500, 750);
+            formDetalleFactura.setOp(op);
+            formDetalleFactura.setStage(this);
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
