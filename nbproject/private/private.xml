@@ -3,28 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Eithan/Desktop/SIMON/src/org/eithanmonroy/view/FormCategoriaProductoView.fxml</file>
-            <file>file:/C:/Users/Eithan/Desktop/SIMON/src/org/eithanmonroy/controller/MenuFacturasController.java</file>
-            <file>file:/C:/Users/Eithan/Desktop/SIMON/src/org/eithanmonroy/controller/MenuPrincipalController.java</file>
-            <file>file:/C:/Users/Eithan/Desktop/SIMON/src/org/eithanmonroy/view/MenuCategoriaProductoView.fxml</file>
-            <file>file:/C:/Users/Eithan/Desktop/SIMON/src/org/eithanmonroy/controller/MenuCategoriaProductoController.java</file>
-            <file>file:/C:/Users/Eithan/Desktop/SIMON/src/org/eithanmonroy/controller/FormDetalleCompraController.java</file>
-            <file>file:/C:/Users/Eithan/Desktop/SIMON/src/org/eithanmonroy/view/FormDetalleFacturaView.fxml</file>
-            <file>file:/C:/Users/Eithan/Desktop/SIMON/src/org/eithanmonroy/model/Cliente.java</file>
-            <file>file:/C:/Users/Eithan/Desktop/SIMON/src/org/eithanmonroy/dto/CategoriaProductoDTO.java</file>
-            <file>file:/C:/Users/Eithan/Desktop/SIMON/src/org/eithanmonroy/controller/MenuProductosController.java</file>
-            <file>file:/C:/Users/Eithan/Desktop/SIMON/src/org/eithanmonroy/controller/FormClienteController.java</file>
+            <file>file:/C:/Users/Eithan/Desktop/SIMON/src/org/eithanmonroy/model/Usuario.java</file>
+            <file>file:/C:/Users/Eithan/Desktop/SIMON/src/org/eithanmonroy/model/NivelAcceso.java</file>
+            <file>file:/C:/Users/Eithan/Desktop/SIMON/src/org/eithanmonroy/controller/FormEmpleadosController.java</file>
+            <file>file:/C:/Users/Eithan/Desktop/SIMON/src/org/eithanmonroy/database/SP%20ProyectoFX.sql</file>
+            <file>file:/C:/Users/Eithan/Desktop/SIMON/src/org/eithanmonroy/utils/SuperKinalAlert.java</file>
+            <file>file:/C:/Users/Eithan/Desktop/SIMON/src/org/eithanmonroy/controller/MenuCargoController.java</file>
+            <file>file:/C:/Users/Eithan/Desktop/SIMON/src/org/eithanmonroy/view/MenuRegistrarUsuarioView.fxml</file>
+            <file>file:/C:/Users/Eithan/Desktop/SIMON/src/org/eithanmonroy/database/ProyectoFX.sql</file>
             <file>file:/C:/Users/Eithan/Desktop/SIMON/src/org/eithanmonroy/system/main.java</file>
-            <file>file:/C:/Users/Eithan/Desktop/SIMON/src/org/eithanmonroy/controller/MenuTicketSoporteController.java</file>
-            <file>file:/C:/Users/Eithan/Desktop/SIMON/src/org/eithanmonroy/controller/FormProductosController.java</file>
-            <file>file:/C:/Users/Eithan/Desktop/SIMON/src/org/eithanmonroy/controller/FormCategoriaProductoController.java</file>
-            <file>file:/C:/Users/Eithan/Desktop/SIMON/src/org/eithanmonroy/model/CategoriaProducto.java</file>
-            <file>file:/C:/Users/Eithan/Desktop/SIMON/src/org/eithanmonroy/model/Ticket.java</file>
-            <file>file:/C:/Users/Eithan/Desktop/SIMON/src/org/eithanmonroy/model/DetalleFactura.java</file>
-            <file>file:/C:/Users/Eithan/Desktop/SIMON/src/org/eithanmonroy/view/FormPromocionesView.fxml</file>
-            <file>file:/C:/Users/Eithan/Desktop/SIMON/src/org/eithanmonroy/controller/FormDetalleFacturaController.java</file>
-            <file>file:/C:/Users/Eithan/Desktop/SIMON/src/org/eithanmonroy/controller/FormComprasController.java</file>
-            <file>file:/C:/Users/Eithan/Desktop/SIMON/src/org/eithanmonroy/controller/FormPromocionesController.java</file>
+            <file>file:/C:/Users/Eithan/Desktop/SIMON/src/org/eithanmonroy/controller/MenuInicioSesionController.java</file>
+            <file>file:/C:/Users/Eithan/Desktop/SIMON/src/org/eithanmonroy/controller/MenuRegistrarUsuarioController.java</file>
+            <file>file:/C:/Users/Eithan/Desktop/SIMON/src/org/eithanmonroy/view/MenuInicioSesionView.fxml</file>
+            <file>file:/C:/Users/Eithan/Desktop/SIMON/nbproject/build-impl.xml</file>
         </group>
     </open-files>
 </project-private>

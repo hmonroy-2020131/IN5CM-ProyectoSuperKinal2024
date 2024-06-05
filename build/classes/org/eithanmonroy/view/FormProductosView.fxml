@@ -23,7 +23,7 @@
       <TextField fx:id="tfPrecioC" layoutX="22.0" layoutY="600.0" prefHeight="25.0" prefWidth="327.0" />
       <ComboBox fx:id="cmbDistribuidores" layoutX="22.0" layoutY="685.0" prefHeight="25.0" prefWidth="327.0" />
       <ComboBox fx:id="cmbCategoriasP" layoutX="437.0" layoutY="124.0" prefHeight="25.0" prefWidth="327.0" />
-      <ImageView fx:id="imgCargar" fitHeight="150.0" fitWidth="200.0" layoutX="508.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imgCargar" fitHeight="150.0" fitWidth="200.0" layoutX="508.0" layoutY="183.0" onDragDropped="#handleOnDrop" onDragOver="#handleOnDrag" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="imgMostrar" fitHeight="150.0" fitWidth="200.0" layoutX="508.0" layoutY="471.0" pickOnBounds="true" preserveRatio="true" />
       <Button fx:id="btnCancelar" layoutX="825.0" layoutY="640.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="70.0" prefWidth="145.0" text="Cancelar" />
       <Button fx:id="btnGuardar" layoutX="980.0" layoutY="640.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="70.0" prefWidth="145.0" text="Guardar" />

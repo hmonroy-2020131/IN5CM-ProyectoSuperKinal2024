@@ -105,6 +105,25 @@ public class FormEmpleadosController implements  Initializable {
                     }
                 }
                 
+            }else if(op == 3){
+                if(!tfNombreE.getText().equals("") && !tfApellidoE.getText().equals("") && !tfSueldo.getText().equals("") && !tfHoraEntrada.getText().equals("") && !tfHoraSalida.getText().equals("")){
+                    agregarEmpleado();
+                    SuperKinalAlert.getInstance().mostrarAlertasInformacion(400);
+                    stage.menuRegistrarUsuarioView();
+                }else{
+                    SuperKinalAlert.getInstance().mostrarAlertasInformacion(33);
+                    if(tfNombreE.getText().equals("")){
+                        tfNombreE.requestFocus();
+                    }else if(tfApellidoE.getText().equals("")){
+                        tfApellidoE.requestFocus();
+                    }else if(tfSueldo.getText().equals("")){
+                        tfSueldo.requestFocus();
+                    }else if(tfHoraEntrada.getText().equals("")){
+                        tfHoraEntrada.requestFocus();
+                    }else if(tfHoraSalida.getText().equals("")){
+                        tfHoraSalida.requestFocus();
+                    }
+                }
             }
         }
     }

@@ -33,9 +33,11 @@ import org.eithanmonroy.controller.MenuComprasController;
 import org.eithanmonroy.controller.MenuDistribuidoresController;
 import org.eithanmonroy.controller.MenuEmpleadosController;
 import org.eithanmonroy.controller.MenuFacturasController;
+import org.eithanmonroy.controller.MenuInicioSesionController;
 import org.eithanmonroy.controller.MenuPrincipalController;
 import org.eithanmonroy.controller.MenuProductosController;
 import org.eithanmonroy.controller.MenuPromocionesController;
+import org.eithanmonroy.controller.MenuRegistrarUsuarioController;
 import org.eithanmonroy.controller.MenuTicketSoporteController;
 
 
@@ -53,7 +55,7 @@ public class main extends Application {
     public void start(Stage stage) throws Exception {
         this.stage = stage;
         stage.setTitle("Super Kinal APP");
-        menuPrincipalView();
+        menuRegistrarUsuarioView();
         stage.show();
     }
     public Initializable switchScene(String fxmlName, int width, int height) throws Exception{
@@ -280,6 +282,23 @@ public class main extends Application {
             FormDetalleCompraController formDetalleFactura = (FormDetalleCompraController)switchScene("FormDetalleCompraView.fxml", 500, 750);
             formDetalleFactura.setOp(op);
             formDetalleFactura.setStage(this);
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
+    public void menuInicioSesionView(){
+        try{
+            MenuInicioSesionController menuInicioSesion = (MenuInicioSesionController)switchScene("MenuInicioSesionView.fxml", 500, 750);
+            menuInicioSesion.setStage(this);
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+    }
+    
+    public void menuRegistrarUsuarioView(){
+        try{
+            MenuRegistrarUsuarioController menuRegistrarUsuario = (MenuRegistrarUsuarioController)switchScene("MenuRegistrarUsuarioView.fxml", 500, 750);
+            menuRegistrarUsuario.setStage(this);
         }catch(Exception e){
             System.out.println(e.getMessage());
         }

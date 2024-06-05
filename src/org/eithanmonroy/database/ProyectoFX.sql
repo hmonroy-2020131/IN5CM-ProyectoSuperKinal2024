@@ -144,5 +144,25 @@ create table Promociones(
             references Productos(productoId)
 );
 
+create table NivelesAcceso(
+	nivelAccesoId int not null auto_increment,
+    nivelAcceso varchar(40) not null,
+    primary key PK_nivelAccesoId(nivelAccesoId)
+
+);
+
+
+create table Usuarios(
+    usarioId int not null auto_increment,
+    usuario varchar (30) not null,
+    contrasenia varchar (100) not null,
+    nivelAccesoId int not null,
+    empleadoId int not null,
+    primary key PK_usarioId(usarioId),
+    constraint FK_Usuarios_NivelesAcceso foreign key (nivelAccesoId)
+            references NivelesAcceso(nivelAccesoId),
+    constraint FK_Usuarios_Empleados foreign key (empleadoId)
+            references Empleados(empleadoId)
+);
 
 SET Global time_zone = '-6:00';

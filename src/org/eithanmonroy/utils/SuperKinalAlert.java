@@ -46,7 +46,20 @@ public class SuperKinalAlert {
             alert.setHeaderText("Campos Obligatorios");
             alert.setContentText("Falta Campos Obligatorios, Ingrese los datos. Revise los Datos");
             alert.showAndWait();
+        }else if(code == 5){// Codigo 5 sirve errores al no encontrar un usuario
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Usuario Incorrecto");
+            alert.setHeaderText("Usuario Incorrecto");
+            alert.setContentText("Verifique su Usuario");
+            alert.showAndWait();
+        }else if(code == 7){// Codigo 7 sirve error en la contraseña
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Contraseña Incorrecta ");
+            alert.setHeaderText("Contraseña Incorrecta");
+            alert.setContentText("Verifique su  Contraseña");
+            alert.showAndWait();
         }
+        
         
         
         
@@ -74,4 +87,12 @@ public class SuperKinalAlert {
         return action;
     }
     
+    public void alertaSaludo(String usuario){
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("HOLA ");
+        alert.setHeaderText("Bienvenido " + usuario);
+        alert.setContentText("Ahora puedes ver el programa");
+        alert.showAndWait();    
+       
+    }
 }
