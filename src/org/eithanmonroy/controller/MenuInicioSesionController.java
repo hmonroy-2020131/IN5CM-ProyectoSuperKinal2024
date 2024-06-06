@@ -60,7 +60,7 @@ public class MenuInicioSesionController implements Initializable {
                         if(PasswordUtils.getIntance().checkPassword(tfContrasenia.getText(), usuario.getContrasenia())){
                             if(usuario.getNivelAccesoId() == 1){
                                 btnRegistrar.setDisable(false);
-                                btnIniciar.setText("IR AL MENU");
+                                btnIniciar.setText("ir al menu");
                                 op = 33;
                             }else if(usuario.getNivelAccesoId() == 2){                 
                                  stage.menuPrincipalView(); 

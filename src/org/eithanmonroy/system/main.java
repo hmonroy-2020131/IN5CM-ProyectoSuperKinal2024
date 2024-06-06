@@ -55,7 +55,7 @@ public class main extends Application {
     public void start(Stage stage) throws Exception {
         this.stage = stage;
         stage.setTitle("Super Kinal APP");
-        menuRegistrarUsuarioView();
+        menuInicioSesionView();
         stage.show();
     }
     public Initializable switchScene(String fxmlName, int width, int height) throws Exception{

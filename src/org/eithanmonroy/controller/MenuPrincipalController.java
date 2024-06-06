@@ -11,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.MenuItem;
+import org.eithanmonroy.report.GenerarReporte;
 import org.eithanmonroy.system.main;
 
 /**
@@ -23,7 +24,7 @@ public class MenuPrincipalController implements Initializable{
     
     
     @FXML
-    MenuItem btnClientes, btnTicketSoporte, btnCargos, btnDistribuidores, btnEmpleados, btnFacturas, btnProductos, btnCompras, btnPromociones, btnCategoriaProductos;
+    MenuItem btnClientes, btnTicketSoporte, btnCargos, btnDistribuidores, btnEmpleados, btnFacturas, btnProductos, btnCompras, btnPromociones, btnCategoriaProductos, btnRepoClientes, btnRepoProductos;
     
     @FXML
     public void handleButtonAction(ActionEvent event) throws Exception{
@@ -47,6 +48,10 @@ public class MenuPrincipalController implements Initializable{
             stage.menuPromocionesView();
         } else if(event.getSource() == btnCategoriaProductos){
             stage.menuCategoriaPView();
+        }else if(event.getSource() == btnRepoClientes){
+            GenerarReporte.getInstance().generarClientes();
+        }else if(event.getSource() == btnRepoProductos){
+            GenerarReporte.getInstance().generarProductos();
         }
     }
     

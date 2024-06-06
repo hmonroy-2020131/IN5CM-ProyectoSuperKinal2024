@@ -165,4 +165,22 @@ create table Usuarios(
             references Empleados(empleadoId)
 );
 
+INSERT INTO Clientes (nombre, apellido, telefono, direccion, nit) VALUES
+    ('Lewis', 'Hamilton', '5555-6789', 'Ciudad', '1234567890'),
+    ('Lionel', 'Messi', '4444-5678', 'Ciudad', '0987654321'),
+    ('Serena', 'Williams', '3333-9876', 'Ciudad', '1122334455');
+
+INSERT INTO Cargos(nombreCargo, descripcionCargo) VALUES
+    ('Repartidor', 'Repartir prensa');
+    
+INSERT INTO NivelesAcceso (nivelAcceso) VALUES 
+	('Admin'), 
+	('Usuario');
+
+select * from detalleFactura
+join Facturas on detalleFactura.facturaId = Facturas.facturaId
+join Clientes on Facturas.clienteId = Clientes.clienteId
+join Productos on DetalleFactura.productoId = Productos.productoId
+where Facturas.facturaId = 1;
+
 SET Global time_zone = '-6:00';

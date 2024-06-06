@@ -28,6 +28,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import org.eithanmonroy.dao.Conexion;
 import org.eithanmonroy.dto.FacturaDTO;
 import org.eithanmonroy.model.Factura;
+import org.eithanmonroy.report.GenerarReporte;
 import org.eithanmonroy.system.main;
 import org.eithanmonroy.utils.SuperKinalAlert;
 
@@ -51,7 +52,7 @@ public class MenuFacturasController implements Initializable {
     TableColumn colFacturaId,colFecha,colHora,colCliente,colEmpleado,colTotal;
     
     @FXML
-    Button btnRegresar,btnAgregar,btnEditar,btnEliminar,btnBuscar,btnAgregarDF;
+    Button btnRegresar,btnAgregar,btnEditar,btnEliminar,btnBuscar,btnAgregarDF, btnVerFactura;
     
     @FXML
     TextField tfFacturaId;
@@ -82,6 +83,8 @@ public class MenuFacturasController implements Initializable {
             }
         }else if(event.getSource() == btnAgregarDF){
             stage.formDetalleFacturaView(1);
+        }else if(event.getSource() == btnVerFactura){
+            GenerarReporte.getInstance().generarFactura(((Factura)tblFacturas.getSelectionModel().getSelectedItem()).getFacturaId());
         }
     }
     

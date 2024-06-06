@@ -58,5 +58,6 @@
             </ImageView>
          </graphic></Button>
       <TextField fx:id="tfFacturaId" layoutX="889.0" layoutY="175.0" prefHeight="28.0" prefWidth="188.0" promptText="Ingrese el id de la factura a buscar" />
+      <Button fx:id="btnVerFactura" layoutX="965.0" layoutY="673.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="70.0" prefWidth="159.0" text="Ver " />
    </children>
 </AnchorPane>

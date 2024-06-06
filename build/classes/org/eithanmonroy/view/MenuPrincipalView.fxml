@@ -32,7 +32,8 @@
           </Menu>
           <Menu mnemonicParsing="false" text="Reportes">
             <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
+              <MenuItem fx:id="btnRepoClientes" mnemonicParsing="false" onAction="#handleButtonAction" text="Clientes" />
+                  <MenuItem fx:id="btnRepoProductos" mnemonicParsing="false" onAction="#handleButtonAction" text="Productos" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Ayuda">
